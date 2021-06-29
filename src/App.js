@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Home/Home";
+import BlogDetails from "./components/BlogDetail/BlogDetails";
+import NotFound from "./components/NotFound/NotFound";
+import EditBlog from "./components/Edit/EditBlog";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Create from "./components/Create/Create";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="content">
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/create">
+              <Create />
+            </Route>
+            <Route path="/blogs/:id">
+              <BlogDetails />
+            </Route>
+            <Route path="/update/:id">
+              <EditBlog />
+            </Route>
+            <Route path="*">
+              {/* Không cần path cũng được */}
+              <NotFound />
+            </Route>
+          </Switch>
+        </div>
+      </div>
+    </Router>
   );
 }
 

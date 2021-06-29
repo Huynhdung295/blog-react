@@ -1,0 +1,25 @@
+.blog-details h2 {
+    font-size: 20px;
+    color: #f1356d;
+    margin-bottom: 10px;
+  }
+  .blog-details div {
+    margin: 20px 0;
+  }
+  .blog-details button {
+    background: #f1356d;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .title-delete{
+    display: flex;
+    justify-content: space-between;
+  }
+  .edit-delete{
+    width: 12rem;
+    display: flex;
+    place-content: space-evenly;
+  }
