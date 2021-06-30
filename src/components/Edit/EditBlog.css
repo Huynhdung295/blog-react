@@ -22,7 +22,7 @@
   }
   .update button {
     background: #f1356d;
-    color: #fff;
+    color: var(--color-blog-2);
     border: 0;
     padding: 8px;
     border-radius: 8px;

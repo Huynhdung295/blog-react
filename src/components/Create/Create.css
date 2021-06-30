@@ -9,7 +9,7 @@
   }
   .create h2 {
     font-size: 20px;
-    color: #f1356d;
+    color: var(--color-blog-1);
     margin-bottom: 30px;
   }
   .create input, .create textarea, .create select {
@@ -21,8 +21,8 @@
     display: block;
   }
   .create button {
-    background: #f1356d;
-    color: #fff;
+    background: var(--color-blog-1);
+    color: var(--color-blog-2);
     border: 0;
     padding: 8px;
     border-radius: 8px;

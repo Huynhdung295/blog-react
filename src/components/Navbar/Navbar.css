@@ -4,10 +4,10 @@
   align-items: center;
   max-width: 600px;
   margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 1px solid var(--color-blog-2);
 }
 .navbar h1 {
-  color: #f1356d;
+  color: var(--color-blog-1);
 }
 .navbar .links {
   margin-left: auto;
@@ -18,13 +18,20 @@
   padding: 6px;
 }
 .navbar a:hover {
-  color: #f1356d;
+  color: var(--color-blog-1);
 }
 .new-blog {
-  color: #f2f2f2;
-  background-color: #f1356d;
+  color: var(--color-blog-2);
+  background-color: var(--color-blog-1);
   border-radius: 8px;
 }
 .new-blog:hover {
-color: #f2f2f2 !important;
+color: var(--color-blog-2) !important;
+}
+.navbar button{
+  background: var(--color-blog-2) ;
+  color:var(--color-blog-1) ;
+  height: 2rem;
+  width: 7rem;
+  border-style: none;
 }

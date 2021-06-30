@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import BlogDetails from "./components/BlogDetail/BlogDetails";
@@ -9,10 +9,17 @@ import Create from "./components/Create/Create";
 import "./App.css";
 
 function App() {
+  const [theme, setTheme] = useState("App");
+  const [text, setText] = useState("Dark Theme");
+
+  const handleClick = () => {
+   setTheme(!theme)
+   setText(!text)
+  };
   return (
     <Router>
-      <div className="App">
-        <Navbar />
+      <div className={theme ? "App" : "App dark-theme"}>
+        <Navbar onClick={handleClick} text={text ? "Dark Theme" : "Light Theme"} />
         <div className="content">
           <Switch>
             <Route exact path="/">

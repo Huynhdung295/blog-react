@@ -10,3 +10,12 @@
   margin: 40px auto;
   padding: 20px;
 }
+:root {
+  --color-blog-1: #f1356d;
+  --color-blog-2: #f2f2f2;
+}
+
+.dark-theme {
+  --color-blog-1: #111111;
+  --color-blog-2: #f2f2f2;
+}
